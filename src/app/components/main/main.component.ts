@@ -21,7 +21,7 @@ export class MainComponent implements OnInit {
   		(response) => {
 
   		// ASSIGN VALUES
-  		
+  		console.log(response)
 
   		// Change dataReady to true.
   		this.dataReady = true;
