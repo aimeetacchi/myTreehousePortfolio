@@ -21,6 +21,7 @@ const app = express();
 // BODY PARSER ===
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
 //create middleware to use throughout app
 app.use(function(req, res, next) {
 //set headers to allow cross origin request.
@@ -29,6 +30,7 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
+
 
 const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist');
