@@ -25,3 +25,20 @@ nav ul li {
 	padding: .5em;
 	list-style: none;
 }
+
+
+
+/* BADGES UL LIST */
+
+.badges-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.badges-list li {
+	list-style-type: none;
+	width: 45%;
+	border:1px solid;
+	padding: 2em;
+}

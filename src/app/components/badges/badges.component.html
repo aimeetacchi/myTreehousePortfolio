@@ -1,1 +1,4 @@
 <h2>My Badges</h2>
+<ul class="badges-list" >
+	<li *ngFor="let badge of badges | reverse">{{badge.name }} -<br/> {{badge.earned_date | date:'MMM d, y'}}<br/><img src="{{badge.icon_url}}" class="img-fluid" alt="badgeicon"></li>
+</ul>

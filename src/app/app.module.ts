@@ -11,7 +11,8 @@ import { Err404Component } from './components/err404/err404.component';
 
 // Services =====
 import { DataService } from './services/data.service';
-
+// Custom Pipe ----
+import { ReversePipe } from './pipes/reverseArr.pipe';
 // Routing ========
 import { RoutingModule } from './routing/routing.module';
 import { BadgesComponent } from './components/badges/badges.component';
@@ -28,6 +29,7 @@ import { HeaderComponent } from './components/header/header.component';
     BadgesComponent,
     PointsComponent,
     HeaderComponent,
+    ReversePipe
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),

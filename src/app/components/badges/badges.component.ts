@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-badges',
@@ -6,10 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class BadgesComponent implements OnInit {
-
-  constructor() { }
+ 	@Input() badges : any;
+  constructor() { 
+  		
+  }
 
   ngOnInit() {
+		
   }
+
+  ngOnChanges(changes: SimpleChanges){
+  	console.log(this.badges)
+  }
+
+ 
+  	
+
+
 
 }

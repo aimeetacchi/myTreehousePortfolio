@@ -8,11 +8,13 @@ import { DataService } from '../../services/data.service';
   styles: []
 })
 export class MainComponent implements OnInit {
-
   constructor(
-  	private data : DataService) { }
+  	private data : DataService) {}
 
   dataReady : boolean = false;
+  myName: string;
+  profile_url: string;
+  badges: any;
 
   ngOnInit() {
 
@@ -21,13 +23,16 @@ export class MainComponent implements OnInit {
   		(response) => {
 
   		// ASSIGN VALUES
-  		console.log(response)
-
-  		// Change dataReady to true.
+      this.myName = response['name'];
+      this.profile_url = response['profile_url'];
+      this.badges = response['badges'];
+  	
+      // Change dataReady to true.
   		this.dataReady = true;
   		}, (error)=> {
   			console.log(error);
   		});
+
 
   }
 
