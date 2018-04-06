@@ -14,6 +14,9 @@ import { DataService } from './services/data.service';
 
 // Routing ========
 import { RoutingModule } from './routing/routing.module';
+import { BadgesComponent } from './components/badges/badges.component';
+import { PointsComponent } from './components/points/points.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -22,6 +25,9 @@ import { RoutingModule } from './routing/routing.module';
     MainComponent,
     HomePgComponent,
     Err404Component,
+    BadgesComponent,
+    PointsComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
