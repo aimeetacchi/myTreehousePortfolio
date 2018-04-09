@@ -1,1 +1,22 @@
-<h2>My Treehouse points</h2>
+<div class="mt-3 mb-3">
+	<button class="btn btn-info" (click)="showPoints()">View Points</button>
+</div>
+
+<div *ngIf="showingPoints">
+	<h2>My Treehouse points</h2>
+	<button *ngIf="showingPoints" class="btn btn-warning" (click)="closePoints()">Close</button>
+	<div class="row points">
+		<div class="col-md-3">
+			<p class="text-center"><strong>Total Points:</strong><br/><span class="h2">{{points.total }}</span></p>
+		</div>
+		<div class="col-md-3">
+			<p class="text-center"><strong>HTML:</strong><br/><span class="h2">{{points.HTML}}</span></p>
+		</div>
+		<div class="col-md-3">
+			<p class="text-center"><strong>CSS:</strong><br/> <span class="h2">{{points.CSS}}</span></p>
+		</div>
+		<div class="col-md-3">
+			<p class="text-center"><strong>JavaScript:</strong><br/><span class="h2">{{points.JavaScript}}</span></p>
+		</div>
+	</div>
+</div>

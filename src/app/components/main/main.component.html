@@ -1,4 +1,6 @@
-<p class="mt-4">Name: {{myName}}<p>
-<p>URL: {{ profile_url }}</p>
-<app-badges [badges]="badges"></app-badges>
-<app-points></app-points>
+<div *ngIf="dataReady">
+	<p class="mt-4">Name: {{myName}}<p>
+	<p>URL: {{ profile_url }}</p>
+	<app-badges [badges]="badges"></app-badges>
+	<app-points [points]="points"></app-points>
+</div>

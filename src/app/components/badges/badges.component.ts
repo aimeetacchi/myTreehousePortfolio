@@ -7,6 +7,7 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/cor
 })
 export class BadgesComponent implements OnInit {
  	@Input() badges : any;
+   showingBadges: boolean = false;
   constructor() { 
   		
   }
@@ -16,7 +17,15 @@ export class BadgesComponent implements OnInit {
   }
 
   ngOnChanges(changes: SimpleChanges){
-  	console.log(this.badges)
+  	//console.log(this.badges)
+  }
+
+  showBadges(){
+    this.showingBadges = true;
+  }
+
+  closeBadges() {
+      this.showingBadges = false;
   }
 
  
