@@ -9,31 +9,31 @@ import { DataService } from '../../services/data.service';
 })
 export class MainComponent implements OnInit {
   constructor(
-  	private data : DataService) {}
+  	private data: DataService) {}
 
-  dataReady : boolean = false;
+  dataReady = false;
   myName: string;
   profile_url: string;
   badges: any;
   points: any;
-  profileImg: string = '';
+  profileImg = '';
 
   ngOnInit() {
 
   	// Fetch Treehouse JSON
   	this.data.getData().subscribe(
   		(response) => {
-        console.log(response)
+        console.log(response);
   		// ASSIGN VALUES
       this.myName = response['name'];
       this.profile_url = response['profile_url'];
       this.badges = response['badges'];
       this.points = response['points'];
   	  this.profileImg = response['gravatar_url'];
-      console.log(this.profileImg)
+      console.log(this.profileImg);
       // Change dataReady to true.
   		this.dataReady = true;
-  		}, (error)=> {
+  		}, (error) => {
   			console.log(error);
   		});
 

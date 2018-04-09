@@ -16,7 +16,7 @@ export class DataService {
 // Get TreeHouse JSON DATA
 // ====================
 
-  getData(){
+  getData() {
   	// Change the url to a domain when live. =====
   	return this.http.get('http://localhost:4000/api/getdata', { headers });
 

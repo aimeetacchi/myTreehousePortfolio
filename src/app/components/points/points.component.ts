@@ -6,22 +6,22 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/cor
   styles: []
 })
 export class PointsComponent implements OnInit {
-@Input() points : object;
-showingPoints: boolean = false;
+@Input() points: object;
+showingPoints = false;
   constructor() { }
 
   ngOnInit() {
   }
 
-   ngOnChanges(changes: SimpleChanges){
+   ngOnChanges(changes: SimpleChanges) {
   	//console.log(this.points)
   }
 
-  showPoints(){
+  showPoints() {
   	this.showingPoints = true;
   }
 
-  closePoints(){
+  closePoints() {
 	this.showingPoints = false;
   }
 

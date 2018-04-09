@@ -6,21 +6,21 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/cor
   styles: []
 })
 export class BadgesComponent implements OnInit {
- 	@Input() badges : any;
-   showingBadges: boolean = false;
-  constructor() { 
-  		
+ 	@Input() badges: any;
+   showingBadges = false;
+  constructor() {
+
   }
 
   ngOnInit() {
-		
+
   }
 
-  ngOnChanges(changes: SimpleChanges){
+  ngOnChanges(changes: SimpleChanges) {
   	//console.log(this.badges)
   }
 
-  showBadges(){
+  showBadges() {
     this.showingBadges = true;
   }
 
@@ -28,8 +28,8 @@ export class BadgesComponent implements OnInit {
       this.showingBadges = false;
   }
 
- 
-  	
+
+
 
 
 
