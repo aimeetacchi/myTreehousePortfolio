@@ -10,15 +10,15 @@ headers.append('Access-Control-Allow-Origin', '*');
 export class DataService {
 
   constructor(
-  	private http: HttpClient) { }
+    private http: HttpClient) { }
 
-// ====================
-// Get TreeHouse JSON DATA
-// ====================
+  // ====================
+  // Get TreeHouse JSON DATA
+  // ====================
 
   getData() {
-  	// Change the url to a domain when live. =====
-  	return this.http.get('http://localhost:4000/api/getdata', { headers });
+    // Change the url to a domain when live. =====
+    return this.http.get('https://treehouseapi.herokuapp.com/api/getdata', { headers });
 
   }
 
